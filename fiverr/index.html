@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>fiverr website</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+	<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+	<link  href="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+	<script src="https://use.fontawesome.com/3f48d1b8d7.js"></script>
+    <script src="https://kit.fontawesome.com/0e7534ccff.js" crossorigin="anonymous"></script>
+    
+
+    <style>
+
+    	body{color: white;}
+    	.join-btn {
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+.navbar-brand{margin-right: 0;
+              font-size: 30px;}
+.circle{width: 10px;
+		        height: 10px;
+		       margin-top: 30px;
+		       background-color: green;
+		       border-radius: 70%;}
+form {display: flex;
+	flex-direction: column;
+	margin-left: 100px;}	
+
+	  .inputbtn{display: flex;
+	         flex-direction: row;
+	         margin-bottom: 20px;}
+
+.pop-btn {
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 25px;
+  width: 120px;
+  color: #fff;
+  padding: 2px 2px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}	       
+
+.fullstop{display: flex;
+         flex-direction: row;}
+span {font-family: fantasy;} 
+         
+            .poplists{display: flex;
+                     flex-direction: row;
+                     margin-right: 100px;}       
+
+		       .pop-btn{/*width: 140px;*/
+		       	 /*      /* height: 60px;*/
+		           /*   padding: 0;
+		              border-radius: 25px;*/*/
+		            /* padding-top: 2px;
+		            padding-bottom: 2px;*/}
+
+main {
+	display: flex;
+	align-items: inherit;
+	justify-content:;
+	/*height: 500px;*/
+}
+
+.carousel {
+	position: relative;
+	width: 500px;
+	height: 300px;
+}
+
+.carousel img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: opacity 1s ease-in-out;
+}
+
+.carousel img.active {
+	opacity: 1;
+}
+
+.background-1 {
+	background-color: darkmagenta;
+}
+
+.background-2 {
+	background-color: red;
+}
+
+.background-3 {
+	background-color:lightseagreen;
+}
+
+.background-4 {
+	background-color: magenta;
+}
+
+.background-5 {
+	background-color: darkorange;
+}
+
+/* Basic styling for the page */
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	display: flex;
+	/*s*/
+}
+
+.concrow{margin-top: 70px;
+       /*margin-bottom: 10px;*/}
+
+@media screen and (max-width: 352px) {
+	form{margin-left: 0;}
+
+	.left-section h1{font-size: 20px;}
+
+	.left-section input[type="text"]{font-size: 10px;
+		width: 300px;}
+
+	.section-two{margin-top: 270px;
+	            width: 680px;}
+
+	   .section-two{padding-left: 0;}  
+
+	   .sec-span{padding: 0; 
+	   	         padding-right: 5px;
+			padding-left: 5px;
+		 align-items: center;
+		 justify-content: center;}       
+}
+
+
+.left-section {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-left: 0;
+	/*margin-right: 100px;*/
+	/*background-color: #f2f2f2;*/
+}
+
+.left-section h1 {
+	font-size: 48px;
+	margin-bottom: 20px;
+}
+
+.left-section form {
+	display: flex;
+}
+
+.left-section input[type="text"] {
+	padding: 10px;
+	font-size: 16px;
+	width: 350px;
+	border: none;
+	border-radius: 5px 0 0 5px;
+}
+
+.left-section button[type="submit"] {
+	padding: 10px 20px;
+	font-size: 16px;
+	border: none;
+	border-radius: 0 5px 5px 0;
+	background-color: #333;
+	color: #fff;
+	cursor: pointer;
+}
+
+.right-section {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rebeccapurple;
+}
+
+.carousel {
+	position: relative;
+	width: 400%;
+	height: 500px;
+}
+/*
+.carousel .slide {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: opacity 0.5s ease-in-out;
+}
+
+/*.carousel .slide.active {
+	opacity: 1;
+}*/
+
+/*.carousel img {*/
+/*	width: 100%;
+	height: 100%;
+	margin-top: 20px;
+	object-fit: cover;*/
+}
+
+.carousel .caption {
+	position: absolute;
+	bottom: 10px;
+	left: 10px;}
+
+      .section{/*height: 90vh;*/
+        width: 100%;}
+         
+     .prt1{background: ;
+      height: 600px;
+      width: 100%;}
+
+      section {height: 50vh;}
+
+      .centered-div{display: flex;
+                   flex-direction: row;
+                 }
+
+            .section-two {
+			background-color: lightgrey;
+			color: darkgrey;
+			height: fit-content;
+			padding: 50px;
+			padding-left: 150px;
+		}      
+
+.sec-span{ padding-right: 30px;}
+
+.third{ width: 100%;
+     height: 640px;}
+
+.container-three{background-color: white;
+    }
+    .fir-card{margin-right: 60px;}
+    .fircard{margin-right: 14px;}
+    .second-card{margin-right: 90px;}
+    .cardmargin{margin-left: 20px;}
+     .con-three{display: flex;
+               flex-direction: row;
+               margin-right: 0px;}
+.item{padding: 0px;
+     margin-top: 10px;
+    /* margin-left: 20px;*/
+     border-radius: 10%;}
+
+     .card-body{color: white;}
+
+     @media screen and (max-width: 352px) {
+     	.container-three{width: 680px;}	 
+
+       .paddingcard{padding-bottom: 78px;}     
+     }
+
+
+.fifth{background-color: lightseagreen;
+	width: 1350px;
+      padding-top: 70px;
+      height: 110vh;
+  }
+
+   @media screen and (max-width: 352px) {
+            .fifth{margin-top: 157vh;}
+     	 .freelance{padding-top: 70px;}  
+     	  .fifth{background-color: lightseagreen;
+       height:274vh;
+       width: 680px;}  
+   }
+
+
+/*.prt3 img {width: 200px;
+           height: 400px;
+           border-radius: 10%;
+           margin-top: 20px;
+          margin-left: 55px;}*/
+
+
+/*.prt2{background: purple;}
+.prt3{background: red;}
+.prt4{background: yellow;}
+.prt5{background: green;}
+.prt6{background: purple;}*/
+           
+
+
+    </style>
+</head>
+<body>
+<section class="section prt1">
+   <nav class="navbar navbar-expand-md navbar-dark bg-transparent">
+  <div class="container">
+  	<div class="fullstop">
+    <a class="navbar-brand" href="#"><b>fiverr</b></a><div class="circle"></div>
+    </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#"><b>Fiverr Business</b></a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#"><b> Explore</b></a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#"><b><i class="fa-solid fa-globe fa-md"></i>English</b></a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#"><b>Become a Seller</b></a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#"><b>Sign In</b></a>
+        </li>
+      </ul>
+      <button class="btn join-btn" type="button"><b>Join</b></button>
+    </div>
+  </div>
+</nav>
+
+	<div class="container">
+		<div class="row">
+				<div class="col-md-6 concrow left-section">
+			<h1>Find the perfect <span>freelancing</span> services for your business</h1>
+			
+			<form>
+				<div class="inputbtn">
+				<input type="text" placeholder="Try building mobile app">
+				<button type="submit">Search</button>
+				</div>
+			
+         <div class="poplists">
+			<h5>Popular: </h5>
+      <button class="btn pop-btn" type="button"><b>Website Design</b></button>
+      <button class="btn pop-btn" type="button"><b>Word Press</b></button>
+      <button class="btn pop-btn" type="button"><b>Logo Design</b></button>
+      <button class="btn pop-btn" type="button"><b>AI Services</b></button>
+  </div>
+      </form>	
+		</div>
+	
+	
+			<div class="col-md-6">
+	<main>
+		<div class="carousel">
+			<img src="mruyibg.png" alt="Image 1" class="active">
+			<img src="mrdoziebg.png" alt="Image 2">
+			<img src="mrpaulbg.png" alt="Image 3">
+			<img src="mrprincebg.png" alt="Image 4">
+			<img src="mrpreciousbg.png" alt="Image 5">
+		<div class="right-section">
+	</main>
+</div>
+</div>
+</section>
+
+
+
+<section class="section-two">
+		<div class="centered-div">
+	<p>Trusted by:<span class="sec-span">  Meta </span><span class="sec-span"> Google </span><span class="sec-span"> NETFLIX </span><span class="sec-span"> P&G </span><span class="sec-span"> PayPal </span>
+	 </p>
+</div>
+	</section>
+
+
+<section class="third" style="background-color:white; width:100%;">
+	<div class="container container-three">
+	<div class="row">
+		<h1 style="color: black; padding-top: 30px;-top: 20px;" class="text-center">Popular professional services</h1>
+
+            <div class="col-md-6 con-three fir-card">
+<div class="item fircard">
+    	<div class="card" style="width: 18rem; background-color: grey;">
+  <div class="card-body">
+    <p class="card-text">Add talent to AI</p>
+    <h1>AI Artists</h1>
+  </div>
+  <img src="ebuka.jpg" class="card-img-top" alt="...">
+</div>
+    </div>
+
+
+   <div class="item">
+    	<div class="card" style="width: 17rem; height: 500px;  background-color: grey;">
+  <div class="card-body">
+    <p class="card-text">Build your brand</p>
+    <h1>Logo Design</h1>
+  </div>
+  <img src="logo-copy.jpg" class="card-img-top" alt="..." style="height: 380px; border-radius:2%">
+</div>
+    </div>
+    </div>
+
+   <div class="col-md-6 con-three second-card paddingcard">
+  <div class="item">
+    <div class="card cardmargin" style="width: 17rem; height: 500px; background-color: grey;">
+  <div class="card-body">
+    <p class="card-text">Customize your site</p>
+    <h1>WordPress</h1>
+  </div>
+  <img src="wordpress.jpg" class="card-img-top" alt="..." style="height:390px;">
+</div>
+    </div>
+
+
+    <div class="item ">
+    	<div class="card cardmargin" style="width: 18rem; background-color: grey;">
+  <div class="card-body">
+    <p class="card-text">Share your message</p>
+    <h1>Voice Over</h1>
+  </div>
+  <img src="voice-over.jpg" class="card-img-top" alt="..." style="height: 380px;">
+
+</div>
+
+</div>
+</div>
+    </div>
+
+
+
+    </div>
+        </section>
+
+
+
+<section class="fifth">
+	<div class="container">
+	<div class="row">
+		<div class="col-md-6">
+			<h1 class="freelance" style="margin-bottom: 40px;">A whole world of freelance talent at your fingertips</h1>
+
+			<h4><i class="far fa-check-circle"></i> The best for every budget</h4>
+			<p>Find high-quality services at every price point. No hourly rates, just project-based pricing.</p>
+
+			<h4><i class="far fa-check-circle"></i> Quality work done quickly</h4>
+			<p>Find the right freelancer to begin working on your project within minutes.</p>
+
+			<h4><i class="far fa-check-circle"></i> Protected payments, every time</h4>
+			<p>Always know what youll pay upfront. Your payment isn't released until you approve the work.</p>
+
+			<h4><i class="far fa-check-circle"></i> 24/7</h4>
+			<p>Questions? Our round-the-clock support team is available to help anytime, anywhere.</p>
+		</div>
+
+		<div class="col-md-6" style="background-color: lightseagreen;">
+			<video width="640" height="360" controls>
+  <source src="office-video.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+		</div>
+	</div>
+	
+</div>
+
+</section>
+
+
+<!--  <section class="container-four" style="background-color: white; height: 700px;">
+	<div class="fourth-div" style="width:100%; height:50px; background-color: lightsteelblue;"></div>
+
+	<h1 style="margin-top: 90px; margin-bottom: 20px; color: black; margin-left:120px;">Explore the marketplace</h1>
+
+	
+</section>
+ -->
+<!-- <section class="sixth" style="background-color:white; height: 500px;">
+	<h1></h1>
+</section> -->
+
+
+<script type="text/javascript">
+const carousel = document.querySelector('.carousel');
+const images = carousel.querySelectorAll('img');
+
+let index = 0;
+let interval = setInterval(changeImage, 4000);
+
+function changeImage() {
+	images[index].classList.remove('active');
+	index = (index + 1) % images.length;
+	images[index].classList.add('active');
+	document.body.className = `background-${index + 1}`;
+}
+
+carousel.addEventListener('mouseenter', () => {
+	clearInterval(interval);
+});
+
+carousel.addEventListener('mouseleave', () => {
+	interval = setInterval(changeImage, 4000);
+});
+
+$('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    autoplay:true,
+    autoplayTimeout:3000,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:3
+        }
+    }
+})
+
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js" integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i" crossorigin="anonymous"></script>
+</body>
+</html>
